@@ -224,7 +224,7 @@ rules:
  - DOMAIN,alt6-mtalk.google.com,🎯 全球直连
  - DOMAIN,alt7-mtalk.google.com,🎯 全球直连
  - DOMAIN,alt8-mtalk.google.com,🎯 全球直连
- - DOMAIN,pubads.g.doubleclick.net,,🔰 节点选择
+ - DOMAIN,pubads.g.doubleclick.net,🔰 节点选择
  - DOMAIN,fairplay.l.qq.com,🎯 全球直连
  - DOMAIN,livew.l.qq.com,🎯 全球直连
  - DOMAIN,vd.l.qq.com,🎯 全球直连
