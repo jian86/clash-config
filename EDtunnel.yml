@@ -37,7 +37,6 @@ proxy-groups:
       - 自定义IP和端口
       - edtunnel.vyos.com.cn-2096
       - cdn.anycast.eu.org-2096
-  - name: ♻️ 自动选择
   - name: 🎥 NETFLIX
     type: select
     proxies:
