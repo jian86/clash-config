@@ -224,7 +224,7 @@ rules:
  - DOMAIN,alt6-mtalk.google.com,🎯 全球直连
  - DOMAIN,alt7-mtalk.google.com,🎯 全球直连
  - DOMAIN,alt8-mtalk.google.com,🎯 全球直连
- - DOMAIN,pubads.g.doubleclick.net,🎯 全球直连
+ - DOMAIN,pubads.g.doubleclick.net,,🔰 节点选择
  - DOMAIN,fairplay.l.qq.com,🎯 全球直连
  - DOMAIN,livew.l.qq.com,🎯 全球直连
  - DOMAIN,vd.l.qq.com,🎯 全球直连
@@ -2986,7 +2986,7 @@ rules:
  - DOMAIN-SUFFIX,dot2.eporner.com,🛑 全球拦截
  - DOMAIN-SUFFIX,dotmore.com.tw,🛑 全球拦截
  - DOMAIN-SUFFIX,dou777.com,🛑 全球拦截
- - DOMAIN-SUFFIX,doubleclick.com,🛑 全球拦截
+ - DOMAIN-SUFFIX,doubleclick.com,🔰 节点选择
  - DOMAIN-SUFFIX,doubleclick.ctfile.com,🛑 全球拦截
  - DOMAIN-SUFFIX,doubleclick.tv002.com,🛑 全球拦截
  - DOMAIN-SUFFIX,doubleplay-conf-yql.media.yahoo.com,🛑 全球拦截
@@ -8356,7 +8356,7 @@ rules:
  - DOMAIN-SUFFIX,adshows.21cn.com,🛑 全球拦截
  - DOMAIN-SUFFIX,atrace.chelaile.net.cn,🛑 全球拦截
  - DOMAIN-SUFFIX,logs.chelaile.net.cn,🛑 全球拦截
- - DOMAIN-SUFFIX,doubleclick.net,🛑 全球拦截
+ - DOMAIN-SUFFIX,doubleclick.net,🔰 节点选择
  - DOMAIN-SUFFIX,googleadservices.com,🛑 全球拦截
  - DOMAIN-SUFFIX,googleadsserving.cn,🛑 全球拦截
  - DOMAIN-SUFFIX,googlesyndication.com,🛑 全球拦截
@@ -9369,7 +9369,8 @@ rules:
  - DOMAIN-SUFFIX,wetv.vip,🌍 国外媒体
  - DOMAIN-SUFFIX,wetvinfo.com,🌍 国外媒体
  - IP-CIDR,150.109.28.51/32,🌍 国外媒体,no-resolve
- - DOMAIN-SUFFIX,googlevideo.com,🌍 国外媒体
+ - DOMAIN-SUFFIX,googlevideo.com,🔰 节点选择
+ - DOMAIN-SUFFIX,googlesyndication.com,🔰 节点选择
  - DOMAIN-SUFFIX,youtube.com,🌍 国外媒体
  - DOMAIN-SUFFIX,ytimg.com,🌍 国外媒体
  - DOMAIN,youtubei.googleapis.com,🌍 国外媒体
@@ -10334,6 +10335,7 @@ rules:
  - DOMAIN-SUFFIX,zhihuishu.com,🎯 全球直连
  - DOMAIN-SUFFIX,zhimg.com,🎯 全球直连
  - DOMAIN-SUFFIX,zhuihd.com,🎯 全球直连
+ - DOMAIN-SUFFIX,googlesyndication.com,🔰 节点选择
  - DOMAIN,download.jetbrains.com,🎯 全球直连
  - DOMAIN,images-cn.ssl-images-amazon.com,🎯 全球直连
  - PROCESS-NAME,aria2c,🎯 全球直连
