@@ -5,9 +5,15 @@ mode: Rule
 log-level: info
 external-controller: :9090
 dns:
-    #enable: true
-    #ipv6: false
-    default-nameserver: [119.29.29.29]
+    enable: true
+    ipv6: false
+    default-nameserver: [223.5.5.5, 119.29.29.29]
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
+    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
   - {name: 自定义IP和端口, server: 172.67.72.48, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
   - {name: edtunnel.vyos.com.cn-2096, server: edtunnel.vyos.com.cn, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
