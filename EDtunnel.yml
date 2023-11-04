@@ -1472,9 +1472,6 @@ rules:
  - PROCESS-NAME,WebTorrent,🎯 全球直连
  - PROCESS-NAME,WebTorrent Helper,🎯 全球直连
  - PROCESS-NAME,DownloadService,🎯 全球直连
- - PROCESS-NAME,GitHubDesktop,🔰 节点选择
- - PROCESS-NAME,git-remote-https,🔰 节点选择
- - PROCESS-NAME,git,🔰 节点选择
  - PROCESS-NAME,Weiyun,🎯 全球直连
  - DOMAIN-KEYWORD,aria2,🎯 全球直连
  - DOMAIN-KEYWORD,xunlei,🎯 全球直连
