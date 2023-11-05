@@ -16,7 +16,6 @@ dns:
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
   - {name: 自定义IP和端口, server: 172.67.72.48, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
-  - {name: edtunnel.vyos.com.cn-2096, server: edtunnel.vyos.com.cn, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
   - {name: cdn.anycast.eu.org-2096, server: cdn.anycast.eu.org, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
 
 
@@ -27,7 +26,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 自定义IP和端口
-      - edtunnel.vyos.com.cn-2096
       - cdn.anycast.eu.org-2096
   - name: ♻️ 自动选择
     type: url-test
@@ -35,7 +33,6 @@ proxy-groups:
     interval: 300
     proxies:
       - 自定义IP和端口
-      - edtunnel.vyos.com.cn-2096
       - cdn.anycast.eu.org-2096
   - name: 🎥 NETFLIX
     type: select
@@ -44,7 +41,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 自定义IP和端口
-      - edtunnel.vyos.com.cn-2096
       - cdn.anycast.eu.org-2096
   - name: ⛔️ 广告拦截
     type: select
@@ -65,7 +61,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 自定义IP和端口
-      - edtunnel.vyos.com.cn-2096
       - cdn.anycast.eu.org-2096
   - name: 🌏 国内媒体
     type: select
@@ -78,7 +73,6 @@ proxy-groups:
       - 🎯 全球直连
       - 🔰 节点选择
       - 自定义IP和端口
-      - edtunnel.vyos.com.cn-2096
       - cdn.anycast.eu.org-2096
   - name: 📲 电报信息
     type: select
@@ -86,7 +80,6 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - 自定义IP和端口
-      - edtunnel.vyos.com.cn-2096
       - cdn.anycast.eu.org-2096
   - name: 🍎 苹果服务
     type: select
@@ -95,7 +88,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 自定义IP和端口
-      - edtunnel.vyos.com.cn-2096
       - cdn.anycast.eu.org-2096
   - name: 🎯 全球直连
     type: select
@@ -113,7 +105,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 自定义IP和端口
-      - edtunnel.vyos.com.cn-2096
       - cdn.anycast.eu.org-2096
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
