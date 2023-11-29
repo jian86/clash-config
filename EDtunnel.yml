@@ -15,7 +15,7 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-  - {name: 自定义IP和端口, server: edtunnel.vyos.com.cn, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
+  - {name: 自定义IP和端口, server: edtunnel.vyos.com.cn, port: 443, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
   - {name: cdn.anycast.eu.org-2096, server: cdn.anycast.eu.org, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
 
 
