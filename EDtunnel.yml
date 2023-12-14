@@ -15,8 +15,8 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-  - {name: 自定义IP和端口, server: edtunnel.vyos.com.cn, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
-  - {name: cdn.anycast.eu.org-2096, server: time.cloudflare.com, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
+  - {name: edtunnel.vyos.com.cn, server: edtunnel.vyos.com.cn, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
+  - {name: time.cloudflare.com, server: time.cloudflare.com, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
 
 
 proxy-groups:
@@ -25,23 +25,23 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 自定义IP和端口
-      - cdn.anycast.eu.org-2096
+      - edtunnel.vyos.com.cn
+      - time.cloudflare.com
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 自定义IP和端口
-      - cdn.anycast.eu.org-2096
+      - edtunnel.vyos.com.cn
+      - time.cloudflare.com
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 自定义IP和端口
-      - cdn.anycast.eu.org-2096
+      - edtunnel.vyos.com.cn
+      - time.cloudflare.com
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -60,8 +60,8 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 自定义IP和端口
-      - cdn.anycast.eu.org-2096
+      - edtunnel.vyos.com.cn
+      - time.cloudflare.com
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -72,23 +72,23 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 自定义IP和端口
-      - cdn.anycast.eu.org-2096
+      - edtunnel.vyos.com.cn
+      - time.cloudflare.com
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 自定义IP和端口
-      - cdn.anycast.eu.org-2096
+      - edtunnel.vyos.com.cn
+      - time.cloudflare.com
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 自定义IP和端口
-      - cdn.anycast.eu.org-2096
+      - edtunnel.vyos.com.cn
+      - time.cloudflare.com
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -104,8 +104,8 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 自定义IP和端口
-      - cdn.anycast.eu.org-2096
+      - edtunnel.vyos.com.cn
+      - time.cloudflare.com
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
