@@ -17,6 +17,7 @@ dns:
 proxies:
   - {name: edtunnel.vyos.com.cn, server: edtunnel.vyos.com.cn, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
   - {name: time.cloudflare.com, server: time.cloudflare.com, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
+  - {name: achk.cloudflarest.link, server: achk.cloudflarest.link, port: 2096, client-fingerprint: random, type: vless, uuid: bae93d80-cdc3-4fda-a573-be05823ba0df, tls: true, tfo: false, servername: edtunnel-01.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: edtunnel-01.pages.dev}}, udp: true}
 
 
 proxy-groups:
@@ -27,6 +28,7 @@ proxy-groups:
       - 🎯 全球直连
       - edtunnel.vyos.com.cn
       - time.cloudflare.com
+      - achk.cloudflarest.link
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -34,6 +36,7 @@ proxy-groups:
     proxies:
       - edtunnel.vyos.com.cn
       - time.cloudflare.com
+      - achk.cloudflarest.link
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -42,6 +45,7 @@ proxy-groups:
       - 🎯 全球直连
       - edtunnel.vyos.com.cn
       - time.cloudflare.com
+      - achk.cloudflarest.link
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -62,6 +66,7 @@ proxy-groups:
       - 🎯 全球直连
       - edtunnel.vyos.com.cn
       - time.cloudflare.com
+      - achk.cloudflarest.link
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -74,6 +79,7 @@ proxy-groups:
       - 🔰 节点选择
       - edtunnel.vyos.com.cn
       - time.cloudflare.com
+      - achk.cloudflarest.link
   - name: 📲 电报信息
     type: select
     proxies:
@@ -81,6 +87,7 @@ proxy-groups:
       - 🎯 全球直连
       - edtunnel.vyos.com.cn
       - time.cloudflare.com
+      - achk.cloudflarest.link
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -89,6 +96,7 @@ proxy-groups:
       - ♻️ 自动选择
       - edtunnel.vyos.com.cn
       - time.cloudflare.com
+      - achk.cloudflarest.link
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -106,6 +114,7 @@ proxy-groups:
       - ♻️ 自动选择
       - edtunnel.vyos.com.cn
       - time.cloudflare.com
+      - achk.cloudflarest.link
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
